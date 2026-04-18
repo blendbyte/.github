@@ -48,6 +48,12 @@ Spam protection for Livewire 4 forms. No CAPTCHAs, no external requests, no trac
 **Nova forks**
 A stack of Laravel Nova packages kept working on current Laravel and PHP versions after their original authors moved on.
 
+## About sponsoring us
+
+We get asked occasionally about GitHub Sponsors or similar. Short answer: please don't. This org *is* our sponsorship. The repos here are our commercial business giving back to the ecosystem we build on, and we'd rather keep it that way than add another funnel. The full list of what we publish lives on [our product page](https://www.blendbyte.com/products).
+
+The best way to support the work is to become a customer. If you need managed hosting, cloud infrastructure, or a team to build something custom, say hi at [hello@blendbyte.com](mailto:hello@blendbyte.com). Every new customer is another reason these repos keep getting updates.
+
 ## Working with us
 
 Issues and PRs get read. Good ones get merged fast. Drop a minimal repro in your bug reports and we'll take a look.
