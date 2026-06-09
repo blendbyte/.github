@@ -1,5 +1,4 @@
 <br>
-
 <p align="center">
   <a href="https://www.blendbyte.com">
     <picture>
@@ -8,15 +7,12 @@
     </picture>
   </a>
 </p>
-
 <p align="center">
   Cloud infrastructure, web apps, and developer tools.
 </p>
-
 <p align="center">
   <a href="https://www.blendbyte.com">blendbyte.com</a> · <a href="mailto:hello@blendbyte.com">hello@blendbyte.com</a>
 </p>
-
 <br>
 
 ## What we do
@@ -33,19 +29,32 @@ Two kinds of repos live here.
 
 ## Highlights
 
-**[CoyoteCert](https://github.com/blendbyte/CoyoteCert)** *(gearing up for 1.0)*
-A modern ACME v2 client for PHP. Works with Let's Encrypt, ZeroSSL, Google Trust Services, SSL.com, Buypass, and anything else that speaks RFC 8555. ECDSA by default, ARI-aware smart renewals, full EAB support, PSR-18 HTTP, three swappable storage backends, and a pre-flight self-test that catches misconfigs before burning CA rate limits. Also introduces **dns-persist-01**, our own take on DNS validation: deploy the TXT record once, skip DNS propagation waits on every 90-day renewal forever after. No CA affiliation, no telemetry, no lock-in.
+**[Tindra](https://github.com/blendbyte/tindra)**
+
+Self-hosted error tracking and observability. It speaks the Sentry envelope protocol, so your existing SDKs can point at it after a one-line DSN change. No rewrites, no per-event bill, and your stack traces never leave your servers. Under the hood it's a single Go binary with PostgreSQL behind it and a Vue 3 frontend. We built it because we wanted our own observability running on our own hardware, and figured we probably weren't the only ones.
+
+**[nginx-modules](https://nginx-modules.com)**
+
+Pre-built nginx dynamic modules, served as a plain APT repository. brotli, zstd, ModSecurity, GeoIP2, headers-more, and a few others. Just `apt install`, load the module, and you're done. No compiling from source, and no chasing ABI mismatches either, since every module is built against the matching nginx version.
+
+**[CoyoteCert](https://github.com/blendbyte/CoyoteCert)**
+
+A modern ACME v2 client for PHP 8.3+. Works with Let's Encrypt, ZeroSSL, Google Trust Services, SSL.com, Buypass, and any other RFC 8555 CA. Fluent API, ECDSA by default, ARI-guided renewals, full EAB support, wildcard and multi-domain certs, and a swappable PSR-18 HTTP client. No CA affiliation, no telemetry, no lock-in.
 
 **[laravel-paypal](https://github.com/blendbyte/laravel-paypal)**
+
 PayPal REST API client for Laravel. 1,100+ stars, 337 forks. Originally built by srmklive, now maintained by us after a full handover. Modernized for PHP 8.3+ and Laravel 12/13, with standalone PHP support, PSR-18 HTTP clients, local webhook verification, and Fastlane.
 
 **Filament plugins** &nbsp;·&nbsp; [Title With Slug](https://filamentphp.com/plugins/blendbyte-title-with-slug) &nbsp;·&nbsp; [Resource Lock](https://filamentphp.com/plugins/blendbyte-resource-lock)
+
 Two plugins we maintain in the [official Filament directory](https://filamentphp.com/plugins), both already on Filament 5. **Title With Slug** gives you a WordPress-style title and permalink input with live preview and undo. **Resource Lock** prevents two editors from clobbering each other's work with real-time lock indicators and force-unlock support.
 
 **[livewire-honeypot](https://github.com/blendbyte/livewire-honeypot)**
+
 Spam protection for Livewire 4 forms. No CAPTCHAs, no external requests, no tracking pixels.
 
 **Nova forks**
+
 A stack of Laravel Nova packages kept working on current Laravel and PHP versions after their original authors moved on.
 
 ## About sponsoring us
