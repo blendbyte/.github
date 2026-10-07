@@ -17,7 +17,7 @@
 
 ## What we do
 
-We run web hosting and cloud infrastructure, build custom software for clients, and ship our own SaaS products. Everything runs on infrastructure we operate ourselves.
+We run web hosting and cloud infrastructure, build custom software for clients, and ship our own products: [Textual](https://www.textualapp.com), [Tindra](https://www.tindra.sh), [Stringhive](https://stringhive.com), and [ZNCHost](https://www.znchost.com). Everything runs on infrastructure we operate ourselves.
 
 ## What's on GitHub
 
@@ -25,37 +25,51 @@ Two kinds of repos live here.
 
 **Stuff we ship in production.** Every public repo in this org is running somewhere in our stack. If it's here, we use it. If we don't use it, we don't publish it. No experiments, no graveyards.
 
-**Packages we took over.** A lot of great packages go quiet when their maintainer moves on. Sometimes we fork them and keep them alive inside our org. Sometimes the original author is ready to pass the keys and we step in as the new home. Either way, the goal is the same: current framework versions, real bug fixes, public releases.
+**Projects we took over.** A lot of great software goes quiet when its maintainer moves on. Sometimes we fork it and keep it alive inside our org. Sometimes the original author is ready to pass the keys and we step in as the new home. Either way, the goal is the same: current platform and framework versions, real bug fixes, public releases.
 
 ## Highlights
 
-**[Tindra](https://github.com/blendbyte/tindra)**
+### Apps and products
 
-Self-hosted error tracking and observability. It speaks the Sentry envelope protocol, so your existing SDKs can point at it after a one-line DSN change. No rewrites, no per-event bill, and your stack traces never leave your servers. Under the hood it's a single Go binary with PostgreSQL behind it and a Vue 3 frontend. We built it because we wanted our own observability running on our own hardware, and figured we probably weren't the only ones.
+**[Textual](https://github.com/blendbyte/Textual)** &nbsp;·&nbsp; [textualapp.com](https://www.textualapp.com)
 
-**[nginx-modules](https://nginx-modules.com)**
+The native IRC client for macOS, around since 2010. Its original maintainer passed the project to us in 2026, and Textual 8 is in the works.
 
-Pre-built nginx dynamic modules, served as a plain APT repository. brotli, zstd, ModSecurity, GeoIP2, headers-more, and a few others. Just `apt install`, load the module, and you're done. No compiling from source, and no chasing ABI mismatches either, since every module is built against the matching nginx version.
+**[Tindra](https://github.com/blendbyte/tindra)** &nbsp;·&nbsp; [tindra.sh](https://www.tindra.sh)
 
-**[CoyoteCert](https://github.com/blendbyte/CoyoteCert)**
+Self-hosted error tracking, performance, uptime, and cron monitoring. Works with every Sentry SDK. One Go binary, one PostgreSQL database.
 
-A modern ACME v2 client for PHP 8.3+. Works with Let's Encrypt, ZeroSSL, Google Trust Services, SSL.com, Buypass, and any other RFC 8555 CA. Fluent API, ECDSA by default, ARI-guided renewals, full EAB support, wildcard and multi-domain certs, and a swappable PSR-18 HTTP client. No CA affiliation, no telemetry, no lock-in.
+### Infrastructure tooling
+
+**[nginx-modules](https://github.com/blendbyte/nginx-modules)** &nbsp;·&nbsp; [nginx-modules.com](https://www.nginx-modules.com)
+
+Pre-built nginx dynamic modules as an APT repository for Debian and Ubuntu. brotli, zstd, ModSecurity, GeoIP2, and more. Just `apt install`.
+
+**[CoyoteCert](https://github.com/blendbyte/coyotecert)** &nbsp;·&nbsp; [coyotecert.com](https://coyotecert.com)
+
+ACME v2 client for PHP 8.3+. Works with Let's Encrypt, ZeroSSL, and any other RFC 8555 CA. Comes with a [Laravel integration](https://github.com/blendbyte/coyotecert-laravel).
+
+**[openvox-intellij](https://github.com/blendbyte/openvox-intellij)**
+
+OpenVox 8 and Puppet language support for PhpStorm and other IntelliJ Platform IDEs.
+
+### Laravel ecosystem
 
 **[laravel-paypal](https://github.com/blendbyte/laravel-paypal)**
 
-PayPal REST API client for Laravel. 1,100+ stars, 337 forks. Originally built by srmklive, now maintained by us after a full handover. Modernized for PHP 8.3+ and Laravel 12/13, with standalone PHP support, PSR-18 HTTP clients, local webhook verification, and Fastlane.
+PayPal REST API client for Laravel and standalone PHP. 1,200+ stars, 4.8M+ installs. Originally built by srmklive, now maintained by us.
 
 **Filament plugins** &nbsp;·&nbsp; [Title With Slug](https://filamentphp.com/plugins/blendbyte-title-with-slug) &nbsp;·&nbsp; [Resource Lock](https://filamentphp.com/plugins/blendbyte-resource-lock)
 
-Two plugins we maintain in the [official Filament directory](https://filamentphp.com/plugins), both already on Filament 5. **Title With Slug** gives you a WordPress-style title and permalink input with live preview and undo. **Resource Lock** prevents two editors from clobbering each other's work with real-time lock indicators and force-unlock support.
+A title and permalink input with live preview, and edit locking for multi-user panels. Both on Filament 5.
+
+**Nova fields** &nbsp;·&nbsp; [nova-items-field](https://github.com/blendbyte/nova-items-field) &nbsp;·&nbsp; [nova-attach-many](https://github.com/blendbyte/nova-attach-many)
+
+Kept working on Nova 5 after their original authors moved on.
 
 **[livewire-honeypot](https://github.com/blendbyte/livewire-honeypot)**
 
-Spam protection for Livewire 4 forms. No CAPTCHAs, no external requests, no tracking pixels.
-
-**Nova forks**
-
-A stack of Laravel Nova packages kept working on current Laravel and PHP versions after their original authors moved on.
+Spam protection for Livewire 4 forms. No CAPTCHAs, no external requests.
 
 ## About sponsoring us
 
